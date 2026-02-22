@@ -20,11 +20,11 @@ def test_get_human_age(cat_age: int, dog_age: int, expect: list) -> None:
     assert (get_human_age(cat_age, dog_age) == expect)
 
 
-def test_et_human_age_negative_inputs() -> None:
-    with pytest.raises((ValueError, TypeError)):
+def test_get_human_age_negative_inputs() -> None:
+    with pytest.raises((ValueError)):
         get_human_age(-1, -5)
 
 
-def test_et_human_age_wrog_types() -> None:
+def test_get_human_age_wrong_types() -> None:
     with pytest.raises((TypeError)):
         get_human_age(3.5, "dsf")
